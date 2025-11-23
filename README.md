@@ -112,7 +112,7 @@ Este projeto foi desenvolvido durante a **Imersão Dev**, promovida pela **Alura
 
 -----
 
-**Desenvolvido por [Seu Nome]** 🚀
-[Link para seu LinkedIn] | [Link para seu Portfólio]
+**Desenvolvido por Pedro Luiz Rodrigues Vaz de Melo** 🚀
+[www.linkedin.com/in/pedro-luiz-rodrigues-vaz-de-melo]
 
 ```
