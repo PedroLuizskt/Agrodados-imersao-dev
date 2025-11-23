@@ -1,0 +1,171 @@
+:root {
+    --primary-green: #2E7D32;
+    --light-green: #E8F5E9;
+    --hover-color: #66BB6A;
+    --text-dark: #333;
+    --card-bg: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: var(--text-dark);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Painel de Controle */
+#painel-controle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn-nacional {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.btn-nacional:hover {
+    background-color: #555;
+}
+
+/* Estilos do Mapa SVG */
+.mapa-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    /* O SVG precisa ser interativo */
+}
+
+svg path {
+    cursor: pointer;
+    transition: fill 0.3s ease, transform 0.2s ease;
+    fill: #cfd8dc !important; /* Força cinza padrão */
+    stroke: #fff;
+    stroke-width: 200px; /* Ajuste conforme a escala do seu SVG */
+}
+
+svg path:hover {
+    fill: var(--hover-color) !important; /* Verde ao passar o mouse */
+}
+
+svg path.active {
+    fill: var(--primary-green) !important; /* Verde escuro quando selecionado */
+}
+
+/* Área de Resultados */
+#resultados-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    display: none; /* Escondido por padrão */
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.resultados-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--light-green);
+    padding-bottom: 10px;
+}
+
+#btn-fechar {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #999;
+}
+
+/* Cards */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    background: var(--light-green);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+    color: var(--primary-green);
+    margin-top: 0;
+}
+
+.card .tag {
+    background: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: var(--primary-green);
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+}
+
+.card-link:hover {
+    border-bottom-color: var(--primary-green);
+}
